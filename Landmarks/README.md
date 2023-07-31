@@ -118,3 +118,4 @@ Text("Hello world!")
 
 ## Building Lists and Navigation
 
+### [Xcode15] Preview에서 .previewLayout(.fixed(width: 300, height: 70))작동 안함
