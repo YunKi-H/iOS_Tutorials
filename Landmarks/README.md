@@ -119,3 +119,27 @@ Text("Hello world!")
 ## Building Lists and Navigation
 
 ### [Xcode15] Preview에서 .previewLayout(.fixed(width: 300, height: 70))작동 안함
+```swift
+#Preview {
+    LandmarkRow(landmark: landmarks[1])
+        .previewLayout(.fixed(width: 300, height: 70))
+}
+
+```
+아마 #Preview 매크로 문제인듯
+
+### List의 기본 모양이 문서의 예시와 다름
+.listStyle 기본 설정이 .plain -> .insetGrouped 로 바뀐듯?
+```swift
+List {
+    LandmarkRow(landmark: landmarks[0])
+    LandmarkRow(landmark: landmarks[1])
+}
+.listStyle(.insetGrouped)
+
+List {
+    LandmarkRow(landmark: landmarks[0])
+    LandmarkRow(landmark: landmarks[1])
+}
+.listStyle(.plain)
+```
