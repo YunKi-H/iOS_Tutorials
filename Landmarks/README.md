@@ -143,3 +143,7 @@ List {
 }
 .listStyle(.plain)
 ```
+
+### MapView 말고 페이지 전체에 .ignoresSafeArew(edges: .top) 적용하니 적용됨
+왜지?
+
