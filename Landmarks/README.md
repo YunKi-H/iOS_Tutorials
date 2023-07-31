@@ -76,12 +76,12 @@ struct MapView: View {
 
 ### Xcode15(iOS17) 에서는 View가 화면 위쪽 SafeArea부분까지 침범함 -> .ignoresSafeArea() 적용시 문제발생
 
-## When creating a custom SwiftUI view, where do you declare the view’s layout?
+### When creating a custom SwiftUI view, where do you declare the view’s layout?
 
 >> In the body property.
 Custom views implement the body property, which is a requirement of the View protocol.
 
-## Which layout renders from the following view code?
+### Which layout renders from the following view code?
 ```swift
 var body: some View {
     HStack {
@@ -96,7 +96,7 @@ var body: some View {
 ```
 >> The nested horizontal and vertical stacks arrange the image to the left of the two text views.
 
-## Which of these is a correct way to return three views from a custom view’s body property?
+### Which of these is a correct way to return three views from a custom view’s body property?
 ```swift
 VStack {
    Text("Turtle Rock")
@@ -107,10 +107,14 @@ VStack {
 ```
 >> You can use a stack to return multiple views from a body property.
 
-## Which is the correct way to use modifier methods to configure a view?
+### Which is the correct way to use modifier methods to configure a view?
 ```swift
 Text("Hello world!")
    .font(.title)
    .foregroundColor(.purple)
 ```
 >> A modifier returns a view that applies a new behavior or visual change. You can chain multiple modifiers to achieve the effects you need.
+
+
+## Building Lists and Navigation
+
