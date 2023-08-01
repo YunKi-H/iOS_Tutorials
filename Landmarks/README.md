@@ -147,3 +147,21 @@ List {
 ### MapView 말고 페이지 전체에 .ignoresSafeArew(edges: .top) 적용하니 적용됨
 왜지?
 
+### Generate Previews Dynamically 역시 .previewDevice() 적용 안됨
+```swift
+#Preview {
+    LandmarkList()
+        .previewDevice(PreviewDevice(rawValue: "iPhone SE (2nd generation)"))
+}
+
+struct LandmarkList_Previews: PreviewProvider {
+    static var previews: some View {
+        LandmarkList()
+            .previewDevice(PreviewDevice(rawValue: "iPhone SE (2nd generation)"))
+    }
+}
+```
+Xcode15 Canvas가 바뀌면서 달라진듯
+
+.previewDisplayName()도 안됨
+
