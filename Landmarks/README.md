@@ -192,3 +192,7 @@ Xcode15 Canvas가 바뀌면서 달라진듯
 
 ## Handling User Input
 
+### ModelData: ObservableObject 선언시 final 키워드 사용 이유?
+상속할 일이 없다는걸 명시하기 위해?
+최적화문제 말고 또다른 장점이 있는지?
+
