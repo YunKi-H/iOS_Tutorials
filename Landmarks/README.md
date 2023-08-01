@@ -218,3 +218,6 @@ App 레벨에서 @StateObject프로퍼티 래퍼로 modelData 객체를 선언�
 
 ## Drawing Paths and Shapes
 
+### 사실 그래픽을 직접 구현할 일이 많을것 같지는 않음
+그냥 해보는데 의의를 두기로
+
