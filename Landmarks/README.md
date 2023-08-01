@@ -215,3 +215,6 @@ App 레벨에서 @StateObject프로퍼티 래퍼로 modelData 객체를 선언�
 >>@State private var showFavoritesOnly = false
 >>```
 >>> Use the @State property wrapper to mark a value as state, declare the property as private, and give it a default value.
+
+## Drawing Paths and Shapes
+
