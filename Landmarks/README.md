@@ -201,3 +201,17 @@ Xcode15 Canvas가 바뀌면서 달라진듯
 App 레벨에서 @StateObject프로퍼티 래퍼로 modelData 객체를 선언해서 화면이 재생성되더라도 객체가 재생성되지 않도록 함
 
 @StateObject 로 modelData 선언 -> 하위 뷰에서는 @EnvironmentObject로 받아서 사용
+
+### Which of the following passes data downward in the view hierarchy?
+>> The environmentObject(_:) modifier.
+>>> You apply this modifier so that views further down in the view hierarchy can read data objects passed down through the environment.
+
+### What’s the role of a binding?
+>> It’s a value and a way to change that value.
+>>> A binding controls the storage for a value, so you can pass data around to different views that need to read or write it.
+
+### Which is the correct way to create state for a view?
+>> ```swift
+>>@State private var showFavoritesOnly = false
+>>```
+>>> Use the @State property wrapper to mark a value as state, declare the property as private, and give it a default value.
