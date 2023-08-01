@@ -190,3 +190,5 @@ Xcode15 Canvas가 바뀌면서 달라진듯
 >> Make a different choice in Canvas Settings in Xcode’s preferences.
 >>> You can specify the device to use in the active scheme, in code, or by previewing directly on your device. No need for a trip to the preferences!
 
+## Handling User Input
+
