@@ -196,3 +196,8 @@ Xcode15 Canvas가 바뀌면서 달라진듯
 상속할 일이 없다는걸 명시하기 위해?
 최적화문제 말고 또다른 장점이 있는지?
 
+### @StateObject를 사용한 Model 선언
+
+App 레벨에서 @StateObject프로퍼티 래퍼로 modelData 객체를 선언해서 화면이 재생성되더라도 객체가 재생성되지 않도록 함
+
+@StateObject 로 modelData 선언 -> 하위 뷰에서는 @EnvironmentObject로 받아서 사용
