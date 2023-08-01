@@ -165,3 +165,28 @@ Xcode15 Canvas가 바뀌면서 달라진듯
 
 .previewDisplayName()도 안됨
 
+### In addition to List, which of these types presents a dynamic list of views from a collection?
+
+>> ForEach
+>>> Place a ForEach instance inside a List or other container type to create a dynamic list.
+
+### You can create a List of views from a collection of Identifiable elements. What approach do you use to adapt a collection of elements that don’t conform to the Identifiable protocol?
+
+>> Passing a key path along with the data to List(_:id:).
+>>> Pass the key path to a uniquely identifying property for your collection’s elements as the second parameter when creating a List.
+
+### Which type do you use to make rows of a List tappable to navigate to another view?
+
+>> NavigationLink
+>>> Provide the destination view and the content of a row when you declare a NavigationLink.
+
+### Which of these choices is not a way to set the device for previewing your views?
+
+- Change the simulator selected in the active scheme.
+- Make a different choice in Canvas Settings in Xcode’s preferences.
+- Specify one or more devices using the previewDevice(_:) method.
+- Connect your development device and click the Device Preview button.
+
+>> Make a different choice in Canvas Settings in Xcode’s preferences.
+>>> You can specify the device to use in the active scheme, in code, or by previewing directly on your device. No need for a trip to the preferences!
+
