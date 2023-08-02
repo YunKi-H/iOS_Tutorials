@@ -9,7 +9,6 @@ import SwiftUI
 
 extension AnyTransition {
     static var moveAndFade: AnyTransition {
-//        AnyTransition.move(edge: .trailing)
         .asymmetric(
             insertion: .move(edge: .trailing).combined(with: .opacity),
             removal: .scale.combined(with: .opacity)
@@ -19,7 +18,7 @@ extension AnyTransition {
 
 struct HikeView: View {
     var hike: Hike
-    @State private var showDetail = false
+    @State private var showDetail = true
 
     var body: some View {
         VStack {
