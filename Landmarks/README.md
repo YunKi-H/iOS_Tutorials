@@ -221,3 +221,37 @@ App 레벨에서 @StateObject프로퍼티 래퍼로 modelData 객체를 선언�
 ### 사실 그래픽을 직접 구현할 일이 많을것 같지는 않음
 그냥 해보는데 의의를 두기로
 
+### What is the purpose of GeometryReader?
+>> You use GeometryReader to dynamically draw, position, and size views instead of hard-coding numbers that might not be correct when you reuse a view somewhere else in your app, or on a different-sized display.
+>>> GeometryReader dynamically reports size and position information about the parent view and the device, and updates whenever the size changes; for example, when the user rotates their iPhone.
+
+### How are views laid out in the following code?
+```swift
+ZStack {
+   Circle().fill(.green)
+   Circle().fill(.yellow).scaleEffect(0.8)
+   Circle().fill(.orange).scaleEffect(0.6)
+   Circle().fill(.red).scaleEffect(0.4)
+}
+```
+>> An image that looks like a target, wich circles of varying sizes layered on top of one another.
+>>> ZStack overlays views on top of each other.
+
+### What shape does the following drawing code create?
+```swift
+Path { path in
+   path.move(to: CGPoint(x: 20, y: 0))
+   path.addLine(to: CGPoint(x: 20, y: 200))
+   path.addLine(to: CGPoint(x: 220, y: 200))
+   path.addLine(to: CGPoint(x: 220, y: 0))
+}
+.fill(
+   .linearGradient(
+       Gradient(colors: [.green, .blue]),
+       startPoint: .init(x: 0.5, y: 0),
+       endPoint: .init(x: 0.5, y: 0.5)
+   )
+)
+```
+>> A square with a gradient fill.
+>>> The path builder automatically adds a fourth line of equal length back to the starting point, creating a four-sided square.
