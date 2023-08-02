@@ -264,3 +264,36 @@ Path { path in
 >> withAnimation() {} -> 클로저 내부에서 변경되는 값(state)에 영향받는 모든것에 애니메이션 처리
 
 withAnimation() {} 사용이 권장?
+
+### How do you prevent the rotation effect from being animated in the following example?
+```swift
+Label("Graph", systemImage: "chevron.right.circle")
+    .labelStyle(.iconOnly)
+    .imageScale(.large)
+    .rotationEffect(.degrees(showDetail ? 90 : 0))
+    .scaleEffect(showDetail ? 1.5 : 1)
+    .padding()
+    .animation(.spring(), value: showDetail)
+```
+>> Pass nil to the animation(_:value:) modifier.
+>> ```swift
+>> Label("Graph", systemImage: "chevron.right.circle")
+>>     .labelStyle(.iconOnly)
+>>     .imageScale(.large)
+>>    .rotationEffect(.degrees(showDetail ? 90 : 0))
+>>    .animation(nil, value: showDetail)
+>>    .scaleEffect(showDetail ? 1.5 : 1)
+>>    .padding()
+>>    .animation(.spring(), value: showDetail)
+>> ```
+>>> You can animate rotations that you create using the rotationEffect(_:) modifier.
+
+## Why might you pin a preview to the canvas when you’re developing and refining an animation?
+
+>> To keep a particular preview open while you switch between different files in Xcode.
+>>> If you don’t pin a preview, the canvas switches to display previews in the file you just opened.
+
+## What’s a quick way to test how an animation behaves during interruptions like state changes?
+
+>> Adjust the duration of the animation so that it runs long enough that you can observe and tune its fine details.
+>>> Making animations take longer is a quick and easily reversible change that’s effective for iterating on animations.
