@@ -288,12 +288,15 @@ Label("Graph", systemImage: "chevron.right.circle")
 >> ```
 >>> You can animate rotations that you create using the rotationEffect(_:) modifier.
 
-## Why might you pin a preview to the canvas when you’re developing and refining an animation?
+### Why might you pin a preview to the canvas when you’re developing and refining an animation?
 
 >> To keep a particular preview open while you switch between different files in Xcode.
 >>> If you don’t pin a preview, the canvas switches to display previews in the file you just opened.
 
-## What’s a quick way to test how an animation behaves during interruptions like state changes?
+### What’s a quick way to test how an animation behaves during interruptions like state changes?
 
 >> Adjust the duration of the animation so that it runs long enough that you can observe and tune its fine details.
 >>> Making animations take longer is a quick and easily reversible change that’s effective for iterating on animations.
+
+## Composing Complex Interfaces
+
