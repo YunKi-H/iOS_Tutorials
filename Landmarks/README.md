@@ -255,3 +255,12 @@ Path { path in
 ```
 >> A square with a gradient fill.
 >>> The path builder automatically adds a fourth line of equal length back to the starting point, creating a four-sided square.
+
+## Animating Views and Transitions
+
+### .animation() modifier와 withAnimation() {} 의 차이가 뭐지?
+
+>> .animation() -> 단일 View에 대해서 애니메이션 처리
+>> withAnimation() {} -> 클로저 내부에서 변경되는 값(state)에 영향받는 모든것에 애니메이션 처리
+
+withAnimation() {} 사용이 권장?
