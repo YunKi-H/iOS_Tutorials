@@ -372,3 +372,34 @@ if editMode?.wrappedValue == .inactive {
 }
 ```
 
+원본 데이터를 ProfileEditor() 뷰가 .onAppear / .onDisappear 될때마다 갱신해줘야한다는건 조금 불편한듯
+```swift
+ProfileEditor(profile: $draftProfile)
+  .onAppear {
+      draftProfile = modelData.profile
+  }
+  .onDisappear {
+      modelData.profile = draftProfile
+  }
+```
+
+### How do you update a view when the editing state changes; for example, when a user taps Done after editing their profile?
+>> ```swift
+>> struct EditableNameView: View {
+>>    @Environment(\.editMode) var mode
+>>    @State var name = ""
+>>    var body: some View {
+>>       TextField("Name", text: $name)
+>>          .disabled(mode?.wrappedValue == .inactive)
+>>    }
+>> }
+>> ```
+>>> The code checks the edit mode stored in the environment. Storing the edit mode in the environment makes it simple for multiple views to update when the user enters and exits edit mode.
+
+### When do you add an accessibility label using the accessibility(label:) modifier?
+>> Add an accessibility label whenever doing so would make the meaning of a user interface element clearer to more users.
+>>> Always test your app with VoiceOver on, and then add accessibility labels to your app’s views as necessary.
+
+### What’s the difference between a modal and non-modal view presentation?
+>> When you present a view modally, the destination view covers the source view and replaces the current navigation stack.
+>>> You present a view modally when you want to break out of your app’s normal flow.
