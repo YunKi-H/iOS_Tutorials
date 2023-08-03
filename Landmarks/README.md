@@ -403,3 +403,16 @@ ProfileEditor(profile: $draftProfile)
 ### What’s the difference between a modal and non-modal view presentation?
 >> When you present a view modally, the destination view covers the source view and replaces the current navigation stack.
 >>> You present a view modally when you want to break out of your app’s normal flow.
+
+## Interfacing with UIKit
+
+### SwiftUI에서 UIKit View를 가져오기 위해 채택하는 프로토콜 UIViewControllerRepresentable
+
+- 필수 조건
+   ```swift
+  func makeUIViewController(context: Self.Context) -> Self.UIViewControllerType
+
+  func updateUIViewController(_ uiViewController: Self.UIViewControllerType, context: Self.Context)
+  ```
+
+  
