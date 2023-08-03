@@ -348,3 +348,9 @@ CategoryItem에서 .foregroundColor(.primary) 설정했을때는 ContentView에�
 >> }
 >> ```
 >>> Both the destination and the label appear in view builder closures.
+
+## Working with UI Controls
+
+### Badge()를 300*300 으로 생성한 이후 크기를 줄이는 이유?
+원하는 해상도를 보장하기 위해
+
