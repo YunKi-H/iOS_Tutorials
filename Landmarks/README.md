@@ -415,4 +415,18 @@ ProfileEditor(profile: $draftProfile)
   func updateUIViewController(_ uiViewController: Self.UIViewControllerType, context: Self.Context)
   ```
 
-  
+### 이거 그냥 SwiftUI로 작성하면 안되나?
+iOS 15 부터 추가된 .tabViewStyle(.page) 사용하면 됨
+```swift
+struct PageViewTest: View {
+    var body: some View {
+        TabView {
+            FeatureCard(landmark: ModelData().features[0])
+            FeatureCard(landmark: ModelData().features[1])
+            FeatureCard(landmark: ModelData().features[2])
+        }
+        .tabViewStyle(.page)
+    }
+}
+```
+문제점) 마지막 페이지 이후에 처음페이지로 연결되지 않음
