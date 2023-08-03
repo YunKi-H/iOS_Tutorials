@@ -311,3 +311,10 @@ landmark.image
     .frame(width: 155, height: 155)
     .clipShape(RoundedRectangle(cornerRadius: 5))
 ```
+
+### .listRowInsets(EdgeInset()) ?
+
+화면의 Edge까지 Content가 채워지게 하는 설정?
+
+top, bottom, leading, trailing의 inset을 기본값인 0으로 초기화해주는것 같다.
+
