@@ -278,8 +278,8 @@ Label("Graph", systemImage: "chevron.right.circle")
 >> Pass nil to the animation(_:value:) modifier.
 >> ```swift
 >> Label("Graph", systemImage: "chevron.right.circle")
->>     .labelStyle(.iconOnly)
->>     .imageScale(.large)
+>>    .labelStyle(.iconOnly)
+>>    .imageScale(.large)
 >>    .rotationEffect(.degrees(showDetail ? 90 : 0))
 >>    .animation(nil, value: showDetail)
 >>    .scaleEffect(showDetail ? 1.5 : 1)
@@ -299,4 +299,7 @@ Label("Graph", systemImage: "chevron.right.circle")
 >>> Making animations take longer is a quick and easily reversible change that’s effective for iterating on animations.
 
 ## Composing Complex Interfaces
+
+### CaseIterable?
+enum의 모든 case들을 .allCases 타입 프로퍼티를 사용해 배열처럼 접근이 가능하도록 만들어주는 프로토콜
 
