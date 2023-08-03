@@ -354,3 +354,21 @@ CategoryItem에서 .foregroundColor(.primary) 설정했을때는 ContentView에�
 ### Badge()를 300*300 으로 생성한 이후 크기를 줄이는 이유?
 원하는 해상도를 보장하기 위해
 
+### EditMode
+
+```swift
+@Environment(\.editMode) var editMode
+```
+
+EditButton()과 연동된 환경변수를 통해 Edit화면 접근
+
+변경사항이 적용되기 전에 global app state가 업데이트되는걸 방지하기 위해(ex. 타이핑마다 업데이트되는것 방지) Editing View는 원본 을 복사해서 제공함
+
+```swift
+if editMode?.wrappedValue == .inactive {
+    ProfileSummary(profile: modelData.profile)
+} else {
+    Text("Profile Editor")
+}
+```
+
