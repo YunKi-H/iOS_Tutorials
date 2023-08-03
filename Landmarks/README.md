@@ -330,3 +330,21 @@ Image를 렌더링할 때 투명픽셀을 처리하는 방식
 CategoryItem에서 .foregroundStyle(.primary) 설정했을때는 ContentView에서 파랗게 표시됨
 
 CategoryItem에서 .foregroundColor(.primary) 설정했을때는 ContentView에서 검게 표시됨
+
+### Which view is the root view for the Landmarks app?
+>> ContentView
+>>> The WindowGroup scene defined in the app body declares ContentView as the root view of the app.
+
+### How does the ContentView view use code from the rest of the app?
+>> It connects all of the landmark views in a navigation hierarchy.
+>>> The Landmarks app is the sum of all its views, including navigation views.
+
+### What’s the right code to turn a view into a navigation link?
+>> ```swift
+>> NavigationLink {
+>>     LandmarkDetail(landmark: landmark)
+>> } label: {
+>>     LandmarkCard(landmark: landmark)
+>> }
+>> ```
+>>> Both the destination and the label appear in view builder closures.
