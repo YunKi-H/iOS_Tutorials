@@ -303,3 +303,11 @@ Label("Graph", systemImage: "chevron.right.circle")
 ### CaseIterable?
 enum의 모든 case들을 .allCases 타입 프로퍼티를 사용해 배열처럼 접근이 가능하도록 만들어주는 프로토콜
 
+### .cornerRadius() will be deprecated
+대신 .clipShape() 사용
+```swift
+landmark.image
+    .resizable()
+    .frame(width: 155, height: 155)
+    .clipShape(RoundedRectangle(cornerRadius: 5))
+```
