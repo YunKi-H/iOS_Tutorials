@@ -318,3 +318,15 @@ landmark.image
 
 top, bottom, leading, trailing의 inset을 기본값인 0으로 초기화해주는것 같다.
 
+### Image.renderingMode() ? 
+
+Image를 렌더링할 때 투명픽셀을 처리하는 방식
+
+- .original: 이미지 원본 그대로
+- .template: foregroundColor에 맞춰서
+
+### NavigationLink 글자 색상
+
+CategoryItem에서 .foregroundStyle(.primary) 설정했을때는 ContentView에서 파랗게 표시됨
+
+CategoryItem에서 .foregroundColor(.primary) 설정했을때는 ContentView에서 검게 표시됨
