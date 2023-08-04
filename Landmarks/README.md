@@ -430,3 +430,12 @@ struct PageViewTest: View {
 }
 ```
 문제점) 마지막 페이지 이후에 처음페이지로 연결되지 않음
+
+### Which protocol do you use to bridge UIKit view controllers into SwiftUI?
+>> UIViewControllerRepresentable
+>>> Create a structure that conforms to UIViewControllerRepresentable and implement the protocol requirements to include a UIViewController in your SwiftUI view hierarchy.
+
+### In which method do you create a delegate or data source for a UIViewControllerRepresentable type?
+>> In the makeCoordinator() method.
+>>> Return an instance of the coordinator type from makeCoordinator(). SwiftUI manages its life cycle and provides it as part of the context parameter in other required methods.
+
