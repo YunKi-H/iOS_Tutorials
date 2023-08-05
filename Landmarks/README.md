@@ -442,3 +442,7 @@ struct PageViewTest: View {
 ## Creating a watchOS App
 
 ### Back버튼 표시용 .navigationTitle(_ title: String) 적용 안됨
+
+Preview에서만 안보이는걸로
+
+예시 이미지와는 다른걸 보면 watchOS 10이 되면서 뭔가 바뀐듯
