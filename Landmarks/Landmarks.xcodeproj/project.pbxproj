@@ -25,6 +25,9 @@
 		2B04331E2A7DE4F90027094A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB3C202A7BFE01006D0E27 /* Profile.swift */; };
 		2B04331F2A7DE4F90027094A /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB3BF72A775570006D0E27 /* LandmarkRow.swift */; };
 		2B0433212A7DE5B00027094A /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0433202A7DE5B00027094A /* LandmarkDetail.swift */; };
+		2BE62D222A7DF958002742A5 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62D212A7DF958002742A5 /* NotificationView.swift */; };
+		2BE62D242A7DFB07002742A5 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE62D232A7DFB07002742A5 /* NotificationController.swift */; };
+		2BE62D262A7DFDC2002742A5 /* PushNotificationPayload.apns in Resources */ = {isa = PBXBuildFile; fileRef = 2BE62D252A7DFDC2002742A5 /* PushNotificationPayload.apns */; };
 		2BEB3BDD2A736E5D006D0E27 /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB3BDC2A736E5D006D0E27 /* LandmarksApp.swift */; };
 		2BEB3BDF2A736E5D006D0E27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB3BDE2A736E5D006D0E27 /* ContentView.swift */; };
 		2BEB3BE12A736E5E006D0E27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BEB3BE02A736E5E006D0E27 /* Assets.xcassets */; };
@@ -93,6 +96,9 @@
 		2B0433082A7DDD260027094A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B04330B2A7DDD260027094A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B0433202A7DE5B00027094A /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		2BE62D212A7DF958002742A5 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		2BE62D232A7DFB07002742A5 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		2BE62D252A7DFDC2002742A5 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		2BEB3BD92A736E5D006D0E27 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEB3BDC2A736E5D006D0E27 /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
 		2BEB3BDE2A736E5D006D0E27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -156,6 +162,9 @@
 				2B0433082A7DDD260027094A /* Assets.xcassets */,
 				2B04330A2A7DDD260027094A /* Preview Content */,
 				2B0433202A7DE5B00027094A /* LandmarkDetail.swift */,
+				2BE62D212A7DF958002742A5 /* NotificationView.swift */,
+				2BE62D232A7DFB07002742A5 /* NotificationController.swift */,
+				2BE62D252A7DFDC2002742A5 /* PushNotificationPayload.apns */,
 			);
 			path = "WatchLandmarks Watch App";
 			sourceTree = "<group>";
@@ -404,6 +413,7 @@
 				2B0433152A7DE4F90027094A /* Assets.xcassets in Resources */,
 				2B0433142A7DE4F90027094A /* landmarkData.json in Resources */,
 				2B0433172A7DE4F90027094A /* hikeData.json in Resources */,
+				2BE62D262A7DFDC2002742A5 /* PushNotificationPayload.apns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,8 +444,10 @@
 				2B04331D2A7DE4F90027094A /* Hike.swift in Sources */,
 				2B04331E2A7DE4F90027094A /* Profile.swift in Sources */,
 				2B04331F2A7DE4F90027094A /* LandmarkRow.swift in Sources */,
+				2BE62D242A7DFB07002742A5 /* NotificationController.swift in Sources */,
 				2B04331B2A7DE4F90027094A /* ModelData.swift in Sources */,
 				2B0433212A7DE5B00027094A /* LandmarkDetail.swift in Sources */,
+				2BE62D222A7DF958002742A5 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
