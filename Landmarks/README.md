@@ -439,3 +439,5 @@ struct PageViewTest: View {
 >> In the makeCoordinator() method.
 >>> Return an instance of the coordinator type from makeCoordinator(). SwiftUI manages its life cycle and provides it as part of the context parameter in other required methods.
 
+## Creating a watchOS App
+
