@@ -446,3 +446,12 @@ struct PageViewTest: View {
 Preview에서만 안보이는걸로
 
 예시 이미지와는 다른걸 보면 watchOS 10이 되면서 뭔가 바뀐듯
+
+### Which application template do you use when adding a watchOS target to an iOS project?
+>> Watch App for iOS App
+>>> This creates a watchOS app, and sets it as the companion for the iOS app.
+>>>> Xcode 15, watchOS 10 기준 'Watch App for iOS App' 없어짐 -> 'Watch App'
+
+### Why can’t you reuse the LandmarkDetail view on watchOS?
+>> The watchOS user interface should provide only the most important information onscreen, with quick access to additional information.
+>>> While you can often share views across different platforms, it’s important to be sure that the amount of information a view presents, and the way it presents the information, is suited to the platform.
