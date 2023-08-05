@@ -1,8 +1,8 @@
 //
 //  LandmarkList.swift
-//  Landmarks
+//  WatchLandmarks Watch App
 //
-//  Created by Yunki H on 8/1/23.
+//  Created by Yunki H on 8/5/23.
 //
 
 import SwiftUI
@@ -21,7 +21,7 @@ struct LandmarkList: View {
         NavigationView {
             List {
                 Toggle(isOn: $showFavoritesOnly) {
-                    Text("Favorites Only")
+                    Text("Favorites only")
                 }
                 
                 ForEach(filteredLandmarks) { landmark in
@@ -32,14 +32,11 @@ struct LandmarkList: View {
                     }
                 }
             }
-            .listStyle(.plain)
             .navigationTitle("Landmarks")
-            .frame(minWidth: 300)
         }
     }
 }
 
 #Preview {
     LandmarkList()
-        .environmentObject(ModelData())
 }

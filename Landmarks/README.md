@@ -457,3 +457,6 @@ Preview에서만 안보이는걸로
 >>> While you can often share views across different platforms, it’s important to be sure that the amount of information a view presents, and the way it presents the information, is suited to the platform.
 
 ## Creating a macOS App
+
+### 왠지 모를 preview 에러가 자꾸 난다..
+Sonoma Beta라서 그런가..?
