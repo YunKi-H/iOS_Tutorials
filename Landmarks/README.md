@@ -455,3 +455,5 @@ Preview에서만 안보이는걸로
 ### Why can’t you reuse the LandmarkDetail view on watchOS?
 >> The watchOS user interface should provide only the most important information onscreen, with quick access to additional information.
 >>> While you can often share views across different platforms, it’s important to be sure that the amount of information a view presents, and the way it presents the information, is suited to the platform.
+
+## Creating a macOS App
