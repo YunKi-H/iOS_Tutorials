@@ -460,3 +460,33 @@ Preview에서만 안보이는걸로
 
 ### 왠지 모를 preview 에러가 자꾸 난다..
 Sonoma Beta라서 그런가..?
+
+### Why does the Landmarks app define the filteredLandmarks array in a view instead of inside the model?
+>> So the app can easily present different filtered lists in different windows.
+>>> With the filter controls and the filtered array stored in the view, the user can open multiple windows and view the same data filtered in different ways simultaneously.
+
+### To what protocol must the picker selection type conform in the following code?
+```swift
+Picker("Choose a Value", selection: $selection) {
+    ForEach(Choices.allCases) { choice in
+        Text(choice.name).tag(choice)
+    }
+}
+```
+>> Hashable
+>>> Use a hashable value as the selection in a picker, like you would for the keys in a dictionary.
+
+### Which of the following examples correctly connects the selectedLandmark binding to the list’s currently selected item?
+>> ```swift
+>> List(selection: $selectedLandmark) {
+>>     ForEach(landmarks) { landmark in
+>>         LandmarkRow(landmark: landmark)
+>>             .tag(landmark)
+>>     }
+>> }
+>> ```
+>>> You provide a binding to the selection value by using the list initializer.
+
+### How do you add items to the top level menu for a macOS app?
+>> Add a commands modifier to a scene in your app, and provide it with a Commands instance.
+>>> Create a top level menu item by creating a Commands structure with a body that contains all of your menu commands, and then use that to configure one of your app’s scenes.
