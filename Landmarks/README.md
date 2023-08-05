@@ -441,3 +441,4 @@ struct PageViewTest: View {
 
 ## Creating a watchOS App
 
+### Back버튼 표시용 .navigationTitle(_ title: String) 적용 안됨
