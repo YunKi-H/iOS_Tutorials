@@ -28,3 +28,5 @@ import SwiftUI
 >> LazyVStack은 View가 화면에 표시되어야 할 때만 렌더링 -> 성능향상
 
 ### Image(systemName: String) -> SF Symbols에 근거한 아이콘 출력
+
+###
