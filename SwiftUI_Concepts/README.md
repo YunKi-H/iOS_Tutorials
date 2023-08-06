@@ -20,7 +20,7 @@ import SwiftUI
 >>> 1. WindowGroup
 >>> 2. Window
 >>> 3. DocumentGroup
->>> 4. Settings
+>>> 4. Settings -> macOS전용 (앱의 설정 화면 구성)
 
 ### View: 화면에 보이는 시각적 요소를 정의하는 프로토콜 / 다른 View로 구성되어 계층구조를 이룸
 
@@ -29,4 +29,11 @@ import SwiftUI
 
 ### Image(systemName: String) -> SF Symbols에 근거한 아이콘 출력
 
-###
+### 매크로를 통해 os(macOS, iOS, watchOS ...)별 코드 분리 가능
+```swift
+#if os(iOS)
+  code
+#elseif os(macOS)
+  code
+#endif
+```
