@@ -39,3 +39,38 @@ import SwiftUI
 ```
 
 ### App - Scene - View
+
+## Maintaining the adaptable sizes of built-in views
+
+### Text
+- read-only text
+- String을 인자로 받음
+- Font에 따라 화면에서 차지하는 크기가 결정됨
+
+### Symbols
+- SF Symbols제공
+- 사용자에게 인식되기 쉬운 icon
+- Image(systemName: String) 사용
+- 'Font' modifier로 size, weight 변경 가능
+
+### Labels
+- text와 symbol을 하나의 객체로 표시하기 위해 사용
+- LabelStyle로 표시되는 형식 설정
+
+### Controls
+- 설정창같이 동일한 여러 객체를 나타내기 위해 일정한 크기로 제공됨
+- Controls는 클릭하거나 탭하기 충분한 크기여야 함
+- controlSize(_:) 로 size 변경 가능
+- Picker, Button, Menu, Link, EditButton, ColorPicker 등 존재
+
+### Images
+- 기본적으로 asset의 원본 사이즈로 표현됨
+- resizable(capInsets: resizingMode:), scaledToFit() 등의 modifier들을 통해 편집 가능
+- server로부터 이미지를 접근할 시 AsyncImage()를 사용해 앱의 반응성 유지
+
+### Shapes
+- Rectangle(): 사각형
+- Circle(): 원
+- RoundedRectangle(): 둥근 사각형
+- foregroundStyle() 로 색상설정, frame()으로 크기 설정 가능
+- 기본적으로 가능한 가장 큰 공간 점유
