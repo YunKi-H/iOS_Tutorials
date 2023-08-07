@@ -74,3 +74,10 @@ import SwiftUI
 - RoundedRectangle(): 둥근 사각형
 - foregroundStyle() 로 색상설정, frame()으로 크기 설정 가능
 - 기본적으로 가능한 가장 큰 공간 점유
+
+## Scaling views to complement text
+
+- Capsule(): Shape - 캡슐모양
+
+### Label .background(.purple, Capsule())
+ZStack(){} 사용할 줄 알았는데 틀렸음
