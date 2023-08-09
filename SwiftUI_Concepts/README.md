@@ -81,3 +81,25 @@ import SwiftUI
 
 ### Label .background(.purple, Capsule())
 ZStack(){} 사용할 줄 알았는데 틀렸음
+
+### @ScaleMetric property wrapper: 다양한 font size에 대비해야 할 경우 각 케이스마다 다른 수치를 적용하는 대신 사용
+```swift
+struct KeywordBubble: View {
+    let keyword: String
+    let symbol: String
+    @ScaledMetric(relativeTo: .title) var paddingWidth = 14.5
+    var body: some View {
+        Label(keyword, systemImage: symbol)
+            .font(.title)
+            .foregroundColor(.white)
+            .padding(paddingWidth)
+            .background {
+                Capsule()
+                    .fill(.purple.opacity(0.75))
+            }
+    }
+}
+```
+font .title에 연관된 변수를 14.5로 설정시 dynamicTypeSize 에 따라 동적으로 바뀜
+ex) 사용자가 글씨 크기를 키우면 paddingWidth == 20 으로 늘어나는 효과
+
