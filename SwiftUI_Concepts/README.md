@@ -103,3 +103,16 @@ struct KeywordBubble: View {
 font .title에 연관된 변수를 14.5로 설정시 dynamicTypeSize 에 따라 동적으로 바뀜
 ex) 사용자가 글씨 크기를 키우면 paddingWidth == 20 으로 늘어나는 효과
 
+## Layering content
+
+### Define an overlay
+- ZStack() {}: 스택 내부의 다른 view들에 대한 고려 없이 각각의 view의 자체 크기대로 할당
+- .overlay(alignment:content:): view의 앞에 쌓임 + 기존의 view와 같은 크기(default)
+- .background(_:in:fillStyle): view의 뒤에 쌓임 + 기존의 view와 같은 크기(default)
+
+### .clipShape
+view의 모양을 size나 position을 변경하지 않고 clipping함
+
+### .padding()
+해당 view의 edge와 그 view를 담고있는 view 사이에 공간 추가
+
