@@ -126,3 +126,19 @@ Q) 특정 view의 구조체 내부에서 padding을 적용시켜 사용하는것
 - Form: 사용자의 선택에 따라 표시되는 set을 달리해서 - 필요에 따른 자리 차지
 - if: 조건에 따라 view가 표시되는 공간이 바뀔때 - 필요에 따른 자리 차지
 - hidden(): 공간은 차지하지만 view는 보여주고싶지 않을때
+
+## Organizing and aligning content with stacks
+
+### HStack(alignment:)
+- .top
+- .firstTextBaseline
+- .center
+- .lastTextBaseline
+- .bottom
+
+### VStack(alignment:)
+- .leading
+- .center
+- .trailing
+- .listRowSeparatorLeading
+- .listRowSeparatorTrailing
