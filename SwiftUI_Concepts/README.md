@@ -116,3 +116,5 @@ view의 모양을 size나 position을 변경하지 않고 clipping함
 ### .padding()
 해당 view의 edge와 그 view를 담고있는 view 사이에 공간 추가
 
+Q) 특정 view의 구조체 내부에서 padding을 적용시켜 사용하는것 vs 특정 view를 호출할때 외부에서 padding을 사용하는것 장단점?
+
