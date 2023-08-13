@@ -142,3 +142,11 @@ Q) 특정 view의 구조체 내부에서 padding을 적용시켜 사용하는것
 - .trailing
 - .listRowSeparatorLeading
 - .listRowSeparatorTrailing
+
+## Adjusting the space between views
+- Spacer(): 그 자체로 view면서 공간을 차지하는 역할
+- .padding(_:_:): modifier로서 공간을 만들어줌
+
+### SwiftUI의 built-in collection view들은 기본적으로 내부의 subview들 사이에 space를 적용함
+HStack(spacing:) 매개변수로 space의 크기를 커스텀 가능
+
