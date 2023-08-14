@@ -150,3 +150,11 @@ Q) 특정 view의 구조체 내부에서 padding을 적용시켜 사용하는것
 ### SwiftUI의 built-in collection view들은 기본적으로 내부의 subview들 사이에 space를 적용함
 HStack(spacing:) 매개변수로 space의 크기를 커스텀 가능
 
+## Driving changes in your UI with state and bindings
+- State: view에 종속된 data를 가리킴
+- Binding: view에 종속된 것들을 다른 view와 공유할 때 사용
+
+### Separate properties and imperative code from the view
+- view가 하나 이상의 state data를 관리해야 한다면 data를 구조체로 옮기는게 좋음
+- 선언형 인터페이스를 유지하는데 유용
+- unit test에서 state 변경을 쉽게 함
