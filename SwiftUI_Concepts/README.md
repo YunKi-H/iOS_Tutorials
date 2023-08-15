@@ -164,3 +164,13 @@ HStack(spacing:) 매개변수로 space의 크기를 커스텀 가능
 - data가 변경될 때마다 view를 재생성하고 @State객체를 다시 연결함
 - data의 현재 상태를 반영
 
+## Creating a custom input control that binds to a value
+
+### Design a custom control
+1. control이 요구하는 data
+2. 그 data로 뭘 할건지
+3. 그 data를 앱에 어떻게 다시 보여줄건지
+
+### .symbolVariant(_:)
+"star.fill", "star.none" 에서 .fill, .none 부분
+
