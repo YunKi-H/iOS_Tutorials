@@ -174,3 +174,30 @@ HStack(spacing:) 매개변수로 space의 크기를 커스텀 가능
 ### .symbolVariant(_:)
 "star.fill", "star.none" 에서 .fill, .none 부분
 
+## Defining the source of truth using a custom binding
+Source of truth(SSOT): 단일 진실 공급원, 정보와 스키마를 오직 하나의 출처에서만 생성, 편집하도록 하는 방법론. 데이터가 만들어지고 수정되는 작업이 오직 한 곳에서만 일어나도록 보장하는 것.
+
+Custom binding을 사용하는건 유용하지만 대부분의 경우 State변수나 StateObject를 사용하는게 SwiftUI가 변수나 객체를 관리해준다는 점에서 더 나음
+
+### Specifying the source of truth
+```swift
+@Binding var recipeId: Recipe.ID?
+@EnvironmentObject private var recipeBox: RecipeBox
+
+private var recipe: Binding<Recipe> {
+    Binding {
+        if let id = recipeId {
+            return recipeBox.recipe(with: id) ?? Recipe.emptyRecipe()
+        } else {
+            return Recipe.emptyRecipe()
+        }
+    } set: { updatedRecipe in
+        recipeBox.update(updatedRecipe)
+    }
+}
+```
+recipe는 Recipe객체를 리턴하는게 아니라 Recipe타입에 대한 Binding을 리턴함 -> 다른 view들과 공유하는 객체의 동일성을 보장?
+
+### wrappedValue
+binding에 내재된 value
+
