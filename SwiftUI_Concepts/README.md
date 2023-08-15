@@ -158,3 +158,9 @@ HStack(spacing:) 매개변수로 space의 크기를 커스텀 가능
 - view가 하나 이상의 state data를 관리해야 한다면 data를 구조체로 옮기는게 좋음
 - 선언형 인터페이스를 유지하는데 유용
 - unit test에서 state 변경을 쉽게 함
+
+### @State: property wrapper
+- SwiftUI에게 객체를 생성하고 관리하도록 함
+- data가 변경될 때마다 view를 재생성하고 @State객체를 다시 연결함
+- data의 현재 상태를 반영
+
