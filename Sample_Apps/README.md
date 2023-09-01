@@ -10,4 +10,8 @@
 - .tabItem{} 내부엔 Label, Text, Image만 받음 -> Button같은 view는 빈 tab item으로 표기됨
 
 ### .resizeable()
-Image view가 화면에서 가용 공간을 점유할 수 있게 만들어줌
+Image view가 화면에서 가용 공간을 점유할 수 있게 만들어줌.
+
+### ScrollView
+text가 너무 길때 스크롤시키고싶다면 Text뷰를 ScrollView로 감싸라
+-> 얼마나 길때 스크롤되는지?
