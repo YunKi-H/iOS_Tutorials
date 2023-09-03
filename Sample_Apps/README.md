@@ -18,4 +18,23 @@ text가 너무 길때 스크롤시키고싶다면 Text뷰를 ScrollView로 감�
 
 ## Choose Your Own Story
 
-### 
+### subscript (aka Index)
+구조체에 index로 접근하고자 할 때 subscript(Int) {} 메서드 구현
+```swift
+struct Story {
+    
+    let pages: [StoryPage]
+
+
+    subscript(_ pageIndex: Int) -> StoryPage {
+        return pages[pageIndex]
+    }
+}
+
+let story = Story()
+print(story[0])
+```
+
+### NavigationStack
+NavigationStack 내부의 View를 담고 있는 Container로서 동작하고 NavigationLink를 tap하면 해당 view로 transition됨
+
