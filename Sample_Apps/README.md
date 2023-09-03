@@ -15,3 +15,7 @@ Image view가 화면에서 가용 공간을 점유할 수 있게 만들어줌.
 ### ScrollView
 text가 너무 길때 스크롤시키고싶다면 Text뷰를 ScrollView로 감싸라
 -> 얼마나 길때 스크롤되는지?
+
+## Choose Your Own Story
+
+### 
