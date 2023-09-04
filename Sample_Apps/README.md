@@ -46,3 +46,7 @@ NavigationStack 내부의 View를 담고 있는 Container로서 동작하고 Nav
 Stack에 쌓이는 View마다 다른 타이틀을 적용할 수 있어야 하니까 그런듯?
 
 ## Date Planner
+
+### @StateObject vs @ObservableObject
+View 자체는 여러번 재생성될 수 있으므로 View 내부에서 ObservableObject를 생성하는건 안전하지 않음 -> @StateObject 프로퍼티 래퍼로 ObservableObject 객체가 한번만 생성되어 사용될 수 있도록 보장
+

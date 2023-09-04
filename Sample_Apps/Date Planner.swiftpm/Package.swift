@@ -16,20 +16,19 @@ let package = Package(
         .iOSApplication(
             name: "Date Planner",
             targets: ["App"],
+            teamIdentifier: "UV2PAA368V",
             displayVersion: "1.0",
             bundleVersion: "1",
             iconAssetName: "AppIcon",
             supportedDeviceFamilies: [
-                .pad, .phone
+                .pad,
+                .phone
             ],
             supportedInterfaceOrientations: [
                 .portrait,
                 .landscapeRight,
                 .landscapeLeft,
                 .portraitUpsideDown(.when(deviceFamilies: [.pad]))
-            ],
-            capabilities: [
-
             ]
         )
     ],
