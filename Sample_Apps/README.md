@@ -38,3 +38,9 @@ print(story[0])
 ### NavigationStack
 NavigationStack 내부의 View를 담고 있는 Container로서 동작하고 NavigationLink를 tap하면 해당 view로 transition됨
 
+### NavigationLink
+최상단의 NavigationStack 내부의 어디에서든지 NavigationLink() 사용해서 해당 view로 전환할 수 있음
+
+### .navigationTitle()
+이전엔 왜 NavigationStack에 안달고 내부 View에 직접 달아야 작동하나 의문이었는데
+Stack에 쌓이는 View마다 다른 타이틀을 적용할 수 있어야 하니까 그런듯?
