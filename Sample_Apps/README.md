@@ -1,6 +1,6 @@
 # SwiftUI Sample Apps
 
-## Navigating Apps
+## About Me
 
 ### TabView
 - Tab으로 구성된 UI
@@ -44,3 +44,5 @@ NavigationStack 내부의 View를 담고 있는 Container로서 동작하고 Nav
 ### .navigationTitle()
 이전엔 왜 NavigationStack에 안달고 내부 View에 직접 달아야 작동하나 의문이었는데
 Stack에 쌓이는 View마다 다른 타이틀을 적용할 수 있어야 하니까 그런듯?
+
+## Date Planner
