@@ -50,3 +50,9 @@ Stack에 쌓이는 View마다 다른 타이틀을 적용할 수 있어야 하니
 ### @StateObject vs @ObservableObject
 View 자체는 여러번 재생성될 수 있으므로 View 내부에서 ObservableObject를 생성하는건 안전하지 않음 -> @StateObject 프로퍼티 래퍼로 ObservableObject 객체가 한번만 생성되어 사용될 수 있도록 보장
 
+## Organizing with Grids
+
+### LazyVGrid
+- 내부 요소를 필요할 때까지 생성하지 않음(메모리절약)
+- 인자로 (columns:) 를 받음 (가로로 몇칸일지 결정)
+- 내부에서 각각의 Grid에 들어갈 item들을 정의함(ForEach 등)
