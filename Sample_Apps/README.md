@@ -81,3 +81,5 @@ View 내부에 @State로 플래그 변수를 하나 설정함으로써 Edit모�
 ### GeometryReader
 부모 View의 크기를 하위 View에서 사용하기 위해 하위 View를 감싸서 사용
 
+## Laying Ouy Views
+
