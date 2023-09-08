@@ -16,6 +16,7 @@ let package = Package(
         .iOSApplication(
             name: "Editing Grids",
             targets: ["App"],
+            teamIdentifier: "UV2PAA368V",
             displayVersion: "1.0",
             bundleVersion: "1",
             appIcon: .asset("AppIcon"),

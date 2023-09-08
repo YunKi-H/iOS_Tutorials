@@ -42,7 +42,7 @@ NavigationStack 내부의 View를 담고 있는 Container로서 동작하고 Nav
 최상단의 NavigationStack 내부의 어디에서든지 NavigationLink() 사용해서 해당 view로 전환할 수 있음
 
 ### .navigationTitle()
-이전엔 왜 NavigationStack에 안달고 내부 View에 직접 달아야 작동하나 의문이었는데
+이전엔 왜 NavigationStack에 안달고 내부 View에 직접 달아야 작동하나 의문이었는데 
 Stack에 쌓이는 View마다 다른 타이틀을 적용할 수 있어야 하니까 그런듯?
 
 ## Date Planner
@@ -56,3 +56,16 @@ View 자체는 여러번 재생성될 수 있으므로 View 내부에서 Observa
 - 내부 요소를 필요할 때까지 생성하지 않음(메모리절약)
 - 인자로 (columns:) 를 받음 (가로로 몇칸일지 결정)
 - 내부에서 각각의 Grid에 들어갈 item들을 정의함(ForEach 등)
+
+## Editing Grids
+
+### Identifiable
+
+Grid나 List 내부에서 ForEach등으로 View들을 구성할 때 각 개체를 구분지을수 있게 해주는 프로토콜
+
+'id' 프로퍼티가 요구됨
+
+### Edit Mode
+View 내부에 @State로 플래그 변수를 하나 설정함으로써 Edit모드 - 일반모드 전환 가능
+
+-> 다른 방법은 없나..?

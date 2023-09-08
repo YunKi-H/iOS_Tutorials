@@ -15,7 +15,7 @@ struct SymbolDetail: View {
             Image(systemName: symbol.name)
                 .resizable()
                 .scaledToFit()
-                .symbolRenderingMode(.hierarchical)
+                .symbolRenderingMode(.multicolor)
                 .foregroundColor(.accentColor)
         }
         .padding()
