@@ -69,3 +69,6 @@ Grid나 List 내부에서 ForEach등으로 View들을 구성할 때 각 개체�
 View 내부에 @State로 플래그 변수를 하나 설정함으로써 Edit모드 - 일반모드 전환 가능
 
 -> 다른 방법은 없나..?
+
+## Image Gallery
+
