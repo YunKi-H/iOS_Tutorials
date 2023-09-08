@@ -72,3 +72,12 @@ View 내부에 @State로 플래그 변수를 하나 설정함으로써 Edit모�
 
 ## Image Gallery
 
+### AsyncImage
+- image를 비동기적으로 로드함
+    -> 앱 실행시 많은 이미지를 불러올 때 앱이 멈추는것 방지
+- placeholder
+    -> 로딩중에 보여줄 View 설정 가능
+
+### GeometryReader
+부모 View의 크기를 하위 View에서 사용하기 위해 하위 View를 감싸서 사용
+
