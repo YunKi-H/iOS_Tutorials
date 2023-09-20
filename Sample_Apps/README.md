@@ -137,3 +137,5 @@ Stack 들의 내부 view들 사이에 spacing 파라미터를 사용해 공간�
 
 ### Debug
 view마다 border 걸어서 뭐가 잘못된건지 찾기 -> print 찍어보는거랑 비슷한 느낌..
+
+## Meme Creator
