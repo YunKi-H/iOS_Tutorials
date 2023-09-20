@@ -175,3 +175,16 @@ func fetchData() async throws {
     }
 }
 ```
+
+### AsyncImage 사용 코드
+```swift
+AsyncImage(url: imageMetadata.imageUrl) { phase in 
+    if let image = phase.image {
+        image
+    }  else if phase.error != nil  {
+        Image("pandaplaceholder")
+    } else {
+        ProgressView()
+    }
+}
+```
