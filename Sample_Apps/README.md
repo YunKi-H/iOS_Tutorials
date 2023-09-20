@@ -188,3 +188,6 @@ AsyncImage(url: imageMetadata.imageUrl) { phase in
     }
 }
 ```
+
+### .task {}
+view가 처음 나타날때 수행될 task들을 정의하는 modifier
