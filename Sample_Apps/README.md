@@ -139,3 +139,39 @@ Stack 들의 내부 view들 사이에 spacing 파라미터를 사용해 공간�
 view마다 border 걸어서 뭐가 잘못된건지 찾기 -> print 찍어보는거랑 비슷한 느낌..
 
 ## Meme Creator
+비동기 데이터 처리
+
+### Fetcher: ObservableObject
+data를 fetch해왔을때 해당 data를 view에 실시간으로 업데이트해줄수 있기 때문에 observableobject 채택
+
+### async await
+비동기 함수의 선언부에 async 를 붙여 비동기로 작동할것을 알림
+
+비동기 함수를 호출할 때 await 를 붙여 해당 함수를 기다릴 것을 표기?
+
+### throw
+실패 가능성 있는 함수의 선언부에 throw 키워드를 붙여줌
+
+외부에서 함수 호출시 try 키워드와 함께 호출
+
+### 네트워크 데이터 fetch 코드
+```swift
+let urlString = "http://playgrounds-cdn.apple.com/assets/pandaData.json"
+    
+enum FetchError: Error {
+    case badRequest
+    case badJSON
+}
+
+func fetchData() async throws {
+    guard let url = URL(string: urlString) else { return }
+
+    let (data, response) = try await URLSession.shared.data(for: URLRequest(url: url))
+    guard (response as? HTTPURLResponse)?.statusCode == 200 else { throw FetchError.badRequest }
+
+
+    Task { @MainActor in
+        imageData = try JSONDecoder().decode(PandaCollection.self, from: data)
+    }
+}
+```
