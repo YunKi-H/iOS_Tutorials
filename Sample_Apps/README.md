@@ -116,3 +116,22 @@ Image view가 resize 가능하게 만들어 .frame() modifier에 따라 크기�
 ### .font()
 Text 의 속성을 변경하기 위해 사용 (굵기, 폰트, 색상, ...)
 
+### alignment
+VStack, HStack, ZStack 등의 View에게 파라미터로 alignment: 를 넘겨주어 정렬 설정 가능
+- VStack
+    - .leading
+    - .center: default
+    - .trailing
+- HStack
+    - .top
+    - .center: default
+    - .bottom
+
+.frame() 적용시 .frame()의 modifier에 파라미터로 alignment: 를 넘겨주는식으로도 설정 가능
+
+### Spacer
+아무것도 안하지만 공간을 차지해주는 view (차지할 공간이 없으면 render되지 않음)
+
+### spacing
+Stack 들의 내부 view들 사이에 spacing 파라미터를 사용해 공간을 설정할 수 있음
+
