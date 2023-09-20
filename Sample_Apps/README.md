@@ -96,3 +96,23 @@ Shape 뷰들은 남아있는 container의 공간을 채우기 위해 확장됨
 - VStack: view들을 세로로 나열
 - HStack: view들을 가로로 나열
 - ZStack: view들을 z축(겹쳐서)으로 나열
+
+### View's Size
+View 들을 기본적으로 container역할을 하는 부모 view의 크기에 따라 size를 결정함
+
+모든 view들이 같은 크기의 공간을 필요로 하는게 아니라 각각 다름
+
+### .frame()
+view가 차지하는 공간을 최적화하기위해 사용하는 modifier
+
+상수값을 설정하는건 view의 적응력을 제한하기 때문에 width, height 보다 maxWidth, minHeight 등을 사용하는게 나음
+
+### .resizable
+Image view가 resize 가능하게 만들어 .frame() modifier에 따라 크기가 변할 수 있도록 함 (적용하는 순서 중요)
+
+### .scaledToFill() .scaledToFit()
+이미지가 원본에 비해 늘려진것처럼 보일 수 있기 때문에 .frame 대신 사용을 권장
+
+### .font()
+Text 의 속성을 변경하기 위해 사용 (굵기, 폰트, 색상, ...)
+
