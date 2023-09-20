@@ -82,4 +82,17 @@ View 내부에 @State로 플래그 변수를 하나 설정함으로써 Edit모�
 부모 View의 크기를 하위 View에서 사용하기 위해 하위 View를 감싸서 사용
 
 ## Laying Ouy Views
+- Organize your views in different configurations using container views.
+- Fine tune the sizing, spacing, alignment, and positioning of your views.
+- Debug your views when something goes wrong.
 
+### View
+view는 다른 view들을 담고 구성하는 container의 역할을 할 수 있음. ex) VStack
+
+### Shape
+Shape 뷰들은 남아있는 container의 공간을 채우기 위해 확장됨
+
+### Stack
+- VStack: view들을 세로로 나열
+- HStack: view들을 가로로 나열
+- ZStack: view들을 z축(겹쳐서)으로 나열
