@@ -252,3 +252,57 @@ func updateMotionData() {
 - .onAppear: view가 처음 나타날 때 수행될 액션
 - .onDisappear: view를 볼 수 없어질 때 수행될 액션
 
+## Recognizing Gestures
+Update shapes or other content in response to taps, rotations, or other Multi-Touch gestures.
+- TapGesture()
+- LongPressGesture()
+- DragGesture()
+- RotationGesture()
+
+
+### custom Gesture
+```swift
+var tapGesture: some Gesture {
+    TapGesture()
+        .onEnded {
+            withAnimation {
+                color = Color.random()
+            }
+        }
+}
+
+var longPressGesture: some Gesture {
+    LongPressGesture()
+        .onEnded { value in
+            withAnimation {
+                sizeIndex += 1
+                if sizeIndex == sizes.count {
+                    sizeIndex = 0
+                }
+            }
+        }
+}
+
+var dragGesture: some Gesture {
+    DragGesture()
+        .onChanged { value in
+            offset = CGSize(width: value.startLocation.x + value.translation.width - circleSize/2,
+                            height: value.startLocation.y + value.translation.height - circleSize/2)
+        }
+}
+
+var rotationGesture: some Gesture {
+    RotationGesture()
+        .onChanged{ angle in
+            rotation = angle
+        }
+        .onEnded { angle in
+            rotation = angle
+        }
+}
+
+```
+
+### .gesture
+View에 적용시킬수 있는 modifier로 Gesture를 인자로 받음
+
