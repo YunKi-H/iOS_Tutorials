@@ -319,3 +319,14 @@ withAnimation의 클로저 안쪽에서 @State 변수를 변경함으로써 지�
 
 ### .animation()
 view에 value의 변화에 따라 지정한 animation을 적용시켜주는 modifier
+
+## Previewing the Camera Output
+Preview the output from the camera.
+
+### AVFoundation
+```swift
+import AVFoundation
+```
+
+- checkAuthorization() async -> Bool: 권한이 있는지 확인
+- switchCaptureDevice(): 전면/후면카메라 전환
