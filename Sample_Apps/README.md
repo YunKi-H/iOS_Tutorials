@@ -191,3 +191,54 @@ AsyncImage(url: imageMetadata.imageUrl) { phase in
 
 ### .task {}
 view가 처음 나타날때 수행될 task들을 정의하는 modifier
+
+## Bubble Level
+Access and display divice sensor data
+
+### CoreMotion
+```swift
+import CoreMotion
+```
+accelerometers, gyroscopes 등의 센서에 접근 가능하게 해주는 프레임워크
+
+센서 data 얻기 위해 CMMotionManager 객체 사용
+
+예시
+```swift
+private let motionManager = CMMotionManager()
+
+@Published var pitch: Double = 0
+@Published var roll: Double = 0
+@Published var zAcceleration: Double = 0
+
+func start() {
+    UIDevice.current.beginGeneratingDeviceOrientationNotifications()
+    orientationObserver = NotificationCenter.default.addObserver(forName: notification, object: nil, queue: .main) { [weak self] _ in
+        switch UIDevice.current.orientation {
+        case .faceUp, .faceDown, .unknown:
+            break
+        default:
+            self?.currentOrientation = UIDevice.current.orientation
+        }
+    }
+    
+    if motionManager.isDeviceMotionAvailable {
+        motionManager.startDeviceMotionUpdates()
+        
+        timer = Timer.scheduledTimer(withTimeInterval: updateInterval, repeats: true) { _ in
+            self.updateMotionData()
+        }
+    } else {
+        print("Motion data isn't available on this device.")
+    }
+}
+
+func updateMotionData() {
+    if let data = motionManager.deviceMotion {
+        (roll, pitch) = currentOrientation.adjustedRollAndPitch(data.attitude)
+        zAcceleration = data.userAcceleration.z
+        
+        onUpdate()
+    }
+}
+```
