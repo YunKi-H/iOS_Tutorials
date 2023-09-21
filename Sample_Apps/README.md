@@ -242,3 +242,13 @@ func updateMotionData() {
     }
 }
 ```
+
+## Seismometer (지진계)
+진동감지
+
+위에서 만든 MotionDetector class의 zAcceleration 사용해서 진동에 따라 움직이는 바늘, 그래프 표현
+
+### .onAppear .onDisappear
+- .onAppear: view가 처음 나타날 때 수행될 액션
+- .onDisappear: view를 볼 수 없어질 때 수행될 액션
+
