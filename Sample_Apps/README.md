@@ -327,6 +327,3 @@ Preview the output from the camera.
 ```swift
 import AVFoundation
 ```
-
-- checkAuthorization() async -> Bool: 권한이 있는지 확인
-- switchCaptureDevice(): 전면/후면카메라 전환
