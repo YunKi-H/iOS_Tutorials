@@ -306,3 +306,16 @@ var rotationGesture: some Gesture {
 ### .gesture
 View에 적용시킬수 있는 modifier로 Gesture를 인자로 받음
 
+## Animating Shapes
+Learn how to use shapes and simple animations in SwiftUI.
+
+### Path()
+Shape를 커스텀하기 위헌 도구
+
+Path() 객체에 .move로 시작점을 설정 후 .move, .addCurve, .addArc, .addLine 등으로 원하는 모양을 그림
+
+### withAnimation() {}
+withAnimation의 클로저 안쪽에서 @State 변수를 변경함으로써 지정한 애니메이션 구현
+
+### .animation()
+view에 value의 변화에 따라 지정한 animation을 적용시켜주는 modifier
